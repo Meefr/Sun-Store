@@ -1,35 +1,56 @@
-header
+#header
 {
-    background-color: #D14009;
-    border: 100px;
-    margin-top: -8px;
-    margin-left: -10px;
-    margin-right: -10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px , 80px;
+   background: #D14009;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+   margin-top: -10px;
+   margin-left: -10px;
+   margin-right: -10px;
 }
 .logo
 {
     width: 170px;
     cursor: pointer; 
-    margin-left: 10px;
+    margin-left: 80px;
     margin-top: 3px; 
+    
 }
-.navbar
+#navbar
 {
-    width:  85%;
-    height: 15%;
-    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-right: 80px;
 }
-.LightButton
+#navbar li
 {
-    color: #FFE484;
-    padding: 10px 25px;
-    background: transparent;
-    border : 3px solid #fff;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-    font-size: 15px;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFE484;  
+    transition: 0.3s ease; 
+}
+#navbar li a:hover, 
+#navbar li a.active
+{
+  color: white;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20%;
 }
